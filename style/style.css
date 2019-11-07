@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
+
+body{
+    font-family: 'Poiret One', cursive;   
+    width: 99%;     
+    background: rgb(255, 255, 255);
+    color: rgb(78, 139, 198);;
+    
+}
+
+section{
+    width: 100%; 
+    text-align: center;
+    align-content: center;
+}
+
+section#head{
+    height: 30%;
+    margin-bottom: 20px;
+}
+
+section#contens{
+    margin-top: 10%;
+    list-style-position: inside;
+}
+
+h1{
+    text-align: center;
+}
+img#load{
+/*    margin-top: 15%;*/
+    align-content: center;
+}
+
+input, button, textarea {
+    background: white;
+    width: 50%;
+    text-align: center;
+    font-family: 'Poiret One', cursive;
+    font-size: 24pt;
+    margin: 1% 1% 1%;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgb(78, 139, 198);
+}
+
+
+
+@media screen and (max-width: 1000px){
+    body {
+        font-size: 35pt;
+    }
+
+    input, button, textarea {
+    background: white;
+    width: 100%;
+    height: 20%;
+    min-width:500px;
+    text-align: center;
+    font-family: 'Poiret One', cursive;
+    font-size: 40pt;
+    margin: 3% 3% 3%;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgb(78, 139, 198);
+}
+
+    img#load{
+/*        margin-top: 40%;*/
+        align-content: center;
+    }
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+    opacity: 0;
+}

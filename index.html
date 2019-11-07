@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF8">        
+        <title>Nauka 0+</title>
+        <link rel="stylesheet" type="text/css" href="./style/style.css">
+        <link rel="icon" href="./img/favicon.ico">
+    </head>    
+    <body>        
+        <section id="head">
+            <h1>ServerOK</h1>            
+        </section>        
+        <section id="messenger">
+            <template v-if="messenger">
+                <h5>Передай привет серверу)</h5>
+                <input v-model.trim="name" placeholder="Твоё имя" maxlength="100"></input><br>
+                <textarea v-model.trim="message" placeholder="Сообщение для сервера" maxlength="200"></textarea><br>            
+                <button v-if="sendBut" v-on:click="send">Отправить серверу</button>                
+            </template>            
+            <div v-if="load">
+                    <img  src="./img/go.gif"><br>
+                    <h5>Везу твоё сообщение на сервер)</h5>
+            </div>
+            <div v-html="response"></div>
+            <template v-if="happy">
+                <h1>
+                    Ура! я получил сообщение, спасибо!<br>
+                    Можешь поискать его у меня на экране.<br>
+                </h1>
+		<img  src="./img/ok.gif"><br>
+                <button v-on:click="reset">Отправить ещё одно</button>
+            </template>
+            <template v-if="unhappy">
+                <h1>
+                    Извини, но мне стыдно такое показывать у всех на виду.<br>
+                    Пусть это останется между нами.<br>
+                </h1>
+		<img  src="./img/censort.gif"><br>
+                <button v-on:click="reset">Отправить ещё одно</button><br>
+            </template>            
+        </section>
+        <script src="./js/axios.js"></script>
+        <script src="./js/vue.js"></script>
+        <script src="./js/lodash.js"></script>  
+        <script src="./js/messenger.js"></script>  
+    </body>
+</html>    
