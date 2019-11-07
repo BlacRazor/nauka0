@@ -35,6 +35,9 @@ img#load{
 input, button, textarea {
     background: white;
     width: 50%;
+    min-width:500px;
+    min-height:45px;
+    /*resize:none;*/
     text-align: center;
     font-family: 'Poiret One', cursive;
     font-size: 24pt;
